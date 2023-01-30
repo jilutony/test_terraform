@@ -1,0 +1,19 @@
+
+azurerm_application_gateway.terra-app: Still creating... [12m0s elapsed]
+azurerm_application_gateway.terra-app: Creation complete after 12m3s [id=/subscriptions/5849c155-48a5-4c9f-b074-1ac2abc06109/resourceGroups/rg-fit-mako/providers/Microsoft.Network/applicationGateways/Appgateway]
+╷
+│ Warning: Attribute Deprecated
+│
+│   with random_password.password,
+│   on interface.tf line 26, in resource "random_password" "password":
+│   26:   number = true
+│
+│ **NOTE**: This is deprecated, use `numeric` instead.
+╵
+╷
+│ Error: creating Subnet: (Name "mySubnet" / Virtual Network Name "myvnet" / Resource Group "rg-fit-mako"): network.SubnetsClient#CreateOrUpdate: Failure sending request: StatusCode=400 -- Original Error: Code="NetcfgInvalidSubnet" Message="Subnet 'mySubnet' is not valid in virtual network 'myvnet'." Details=[]
+│
+│   with azurerm_subnet.my_terraform_subnet,
+│   on networkbasics.tf line 11, in resource "azurerm_subnet" "my_terraform_subnet":
+│   11: resource "azurerm_subnet" "my_terraform_subnet" {
+│
